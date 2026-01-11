@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Sekolah</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- ===== CSS INTERNAL ===== -->
+<style>
+  body {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  /* Navbar */
+  .navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  /* Hero */
+  #home {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+      url("assets/img/gedung.jpg") center/cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  /* Galeri */
+  #gallery img {
+    cursor: pointer;
+    transition: transform .3s, box-shadow .3s;
+  }
+
+  #gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.3);
+  }
+
+  /* Footer */
+  footer {
+    font-size: 14px;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">SMA Negeri Contoh</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Berita</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="pt-5 mt-5">
+  <div class="container text-center">
+    <h1 class="display-5">Selamat Datang di SMA Negeri Contoh</h1>
+    <p class="lead">Sekolah unggul, berprestasi, dan berkarakter</p>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Tentang Sekolah</h2>
+    <p class="text-center">
+      SMA Negeri Contoh berkomitmen mencetak generasi berprestasi,
+      berakhlak mulia, dan siap bersaing.
+    </p>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Galeri Sekolah</h2>
+    <div class="row g-3">
+      <div class="col-md-3"><img src="assets/img/gedung.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-3"><img src="assets/img/kegiatan1.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-3"><img src="assets/img/kegiatan2.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-3"><img src="assets/img/siswa.jpg" class="img-fluid rounded"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BERITA -->
+<section id="blog" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Berita & Kegiatan</h2>
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+          <img src="assets/img/kegiatan1.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Upacara Hari Pendidikan</h5>
+            <p class="card-text">Upacara berlangsung khidmat dan penuh semangat.</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#b1">Baca</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+          <img src="assets/img/kegiatan2.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Lomba Akademik</h5>
+            <p class="card-text">Siswa meraih prestasi tingkat kabupaten.</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#b2">Baca</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Kontak Kami</h2>
+    <form id="contactForm">
+      <input type="text" class="form-control mb-3" placeholder="Nama" required>
+      <input type="email" class="form-control mb-3" placeholder="Email" required>
+      <textarea class="form-control mb-3" rows="4" placeholder="Pesan" required></textarea>
+      <button class="btn btn-primary w-100">Kirim</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-primary text-white text-center p-3">
+  © 2026 SMA Negeri Contoh
+</footer>
+
+<!-- MODAL -->
+<div class="modal fade" id="b1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Upacara Hari Pendidikan</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Upacara diikuti seluruh warga sekolah dengan penuh disiplin.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="b2">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Lomba Akademik</h5>
+        <button class="btn-close" data-bs-d
